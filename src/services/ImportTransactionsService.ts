@@ -1,12 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import csv from 'csv-parse';
-import { getCustomRepository, getRepository, Not, In } from 'typeorm';
+import { getCustomRepository, getRepository, In } from 'typeorm';
 import Transaction from '../models/Transaction';
 import Category from '../models/Category';
 import uploadConfig from '../config/upload';
 import TransactionsRepository from '../repositories/TransactionsRepository';
-import CreateTransactionService from './CreateTransactionService';
 import AppError from '../errors/AppError';
 
 interface FileTransactions {
